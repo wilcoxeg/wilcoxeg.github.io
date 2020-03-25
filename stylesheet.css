@@ -1,0 +1,32 @@
+
+body {
+	margin: 0 auto;
+	width: 800px;
+	padding: 40px;
+	font-size: 18px;
+
+}
+
+a:link {
+  color: #0d592b;
+  text-decoration: none;
+}
+
+a:visited {
+	color: #0d592b;
+}
+
+a:hover {
+  color: hotpink;
+}
+
+#headshot {
+  float:left;
+  padding-right: 6px;
+}
+
+hr {
+	border-top: 1px solid gray;
+}
+
+#0a3d1e
