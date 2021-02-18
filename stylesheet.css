@@ -1,7 +1,7 @@
 
 body {
 	margin: 0 auto;
-	width: 800px;
+	width: 900px;
 	padding: 40px;
 	font-size: 18px;
 
@@ -20,6 +20,12 @@ a:hover {
   color: hotpink;
 }
 
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
 #headshot {
   float:left;
   padding-right: 6px;
@@ -29,4 +35,9 @@ hr {
 	border-top: 1px solid gray;
 }
 
-#0a3d1e
+.column {
+  float: left;
+  width: 45%;
+  padding: 5px;
+}
+
