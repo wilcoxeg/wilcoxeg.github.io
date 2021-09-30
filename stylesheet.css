@@ -4,15 +4,11 @@ body {
 	width: 900px;
 	padding: 40px;
 	font-size: 13px;
-  font-family: JetBrainsMono;
-  line-height: 1.8;
+  	font-family: sans-serif;
+  	line-height: 1.5;
 }
 
-@font-face {
-  font-style: normal;
-  font-family: "JetBrainsMono";
-  src: local("JetBrainsMono"), url("./lib/JetBrainsMono/ttf/JetBrainsMono-Thin.ttf") format("truetype");
-}
+
 
 a:link {
   color: #0d592b;
@@ -28,7 +24,7 @@ a:hover {
 }
 
 #navbar {
-  font-size: 16px;
+  font-size: 20px;
 }
 
 .row::after {
