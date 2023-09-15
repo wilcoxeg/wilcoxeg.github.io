@@ -49,7 +49,27 @@ hr {
 
 .column {
   float: left;
-  width: 45%;
-  padding: 5px;
+  width: 47%;
+  padding: 10px;
+}
+
+.updates {
+  float: left;
+  position:relative;
+  width: 50%;
+}
+
+.update-bullet {
+  /*  background-color: #edffed; */
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+  /*   border: 2px solid green; */  
+}
+
+.scrollable {
+    height: 280px; /* or any value */
+    width: 700px;
+    overflow-y: auto;
 }
 
