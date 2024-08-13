@@ -54,9 +54,12 @@ hr {
 }
 
 .updates {
-  float: left;
+  border-radius: 5px;
+  float: middle;
   position:relative;
-  width: 50%;
+  width: 100%;
+  background-color: #f4f4f4;
+  padding: 10px;
 }
 
 .update-bullet {
