@@ -5,6 +5,15 @@ from datetime import datetime
 def convert_latex_bold(author_text):
     return author_text.replace(r'\textbf{', '<b>').replace(r'}', '</b>')
 
+# Pubtype Dictionary
+pubtype_dict = {
+    'Journal' : '<span class="tag journal">Journal Article</span>',
+    'Proceedings' : '<span class="tag proceedings">Proceedings Article</span>',
+    'Manuscript' : '<span class="tag preprint">Manuscript</span>',
+    'Chapter' : '<span class="tag chapter">Book Chapter</span>',
+
+}
+
 # Function to process the TSV file and generate HTML output
 def process_publications(input_file, output_file):
     with open(input_file, 'r', newline='', encoding='utf-8') as infile:
@@ -19,13 +28,14 @@ def process_publications(input_file, output_file):
                 title = row['Title'].replace("{", "").replace("}", "")
                 publication = row['Publication'].replace("{", "").replace("}", "")
                 date = row['Year']
+                pubtype = pubtype_dict[row['Type']]
 
                 if date != year_counter:
                     outfile.write(f"<div style='width:100%; background-color: #F0FFF0;'> <b> {date} </b> </div>")
                     year_counter = date
                 
                 # Create the HTML string
-                html_output = f'<div class="update-bullet"> &#128073; {authors} <a href="{url}"> {title}</a> <i> {publication} </i> {date} </div>\n'
+                html_output = f'<div class="update-bullet"> {pubtype} {authors} <a href="{url}"> {title}</a> <i> {publication} </i> {date} </div>\n'
                 
                 # Write the HTML to the output file
                 outfile.write(html_output)
